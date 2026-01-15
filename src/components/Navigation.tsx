@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 const BASE = import.meta.env.BASE_URL
 const navItems = [
-  { name: "About", href: "${BASE}#about" },
-  { name: "Skills", href: "${BASE}#skills" },
-  { name: "Projects", href: "${BASE}#projects" },
-  { name: "Experience", href: "${BASE}#experience" },
-  { name: "Contact", href: "${BASE}#contact" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Contact", href: "#contact" },
 ];
 
 const Navigation = () => {
