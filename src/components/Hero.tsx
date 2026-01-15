@@ -125,13 +125,20 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <Button size="lg" className="btn-glow text-lg px-8 py-6 rounded-2xl">
+          <Button size="lg" className="btn-glow text-lg px-8 py-6 rounded-2xl"
+            onClick={()=>{
+              document.getElementById("projects")?.scrollIntoView({behavior: "smooth"})
+            }}
+            >
             View My Work
           </Button>
           <Button
             variant="outline"
             size="lg"
             className="text-lg px-8 py-6 rounded-2xl border-2 hover:bg-secondary"
+            onClick={()=>{
+              document.getElementById("contact")?.scrollIntoView({behavior: "smooth"})
+            }}
           >
             Let's Build Something
           </Button>

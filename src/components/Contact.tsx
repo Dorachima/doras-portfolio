@@ -50,6 +50,7 @@ const Contact = () => {
           <Button
             size="lg"
             className="btn-glow text-lg px-8 py-6 rounded-2xl gap-2 group"
+            onClick={()=>window.open("mailto:dcchris006@gmail.com")}
           >
             <Mail className="w-5 h-5" />
             Email Dora
@@ -59,6 +60,7 @@ const Contact = () => {
             variant="outline"
             size="lg"
             className="text-lg px-8 py-6 rounded-2xl gap-2 border-2 hover:bg-secondary group"
+            onClick={()=>window.open("https://www.linkedin.com/in/dorachima-onwusah-87057b3a5/","_blank")}
           >
             <Linkedin className="w-5 h-5" />
             LinkedIn
@@ -68,6 +70,7 @@ const Contact = () => {
             variant="outline"
             size="lg"
             className="text-lg px-8 py-6 rounded-2xl gap-2 border-2 hover:bg-secondary"
+            onClick={()=>window.open(import.meta.env.BASE_URL+"Dora_Onwusah_CV.pdf","_blank")}
           >
             <Download className="w-5 h-5" />
             Download CV
