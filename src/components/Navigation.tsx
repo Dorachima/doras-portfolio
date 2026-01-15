@@ -1,14 +1,23 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-const BASE = import.meta.env.BASE_URL
+
 const navItems = [
-  { name: "About", href: "${BASE}#about" },
-  { name: "Skills", href: "${BASE}#skills" },
-  { name: "Projects", href: "${BASE}#projects" },
-  { name: "Experience", href: "${BASE}#experience" },
-  { name: "Contact", href: "${BASE}#contact" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Contact", href: "#contact" },
 ];
+
+const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  e.preventDefault();
+  const targetId = href.replace("#", "");
+  const element = document.getElementById(targetId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,6 +58,7 @@ const Navigation = () => {
               <motion.a
                 key={item.name}
                 href={item.href}
+                onClick={(e) => scrollToSection(e, item.href)}
                 className="relative text-foreground/70 hover:text-foreground transition-colors font-medium"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -110,12 +120,15 @@ const Navigation = () => {
           transition={{ duration: 0.3 }}
         >
           <div className="flex flex-col gap-4">
-            {navItems.map((item, index) => (
+              {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
                 href={item.href}
                 className="text-lg font-medium text-foreground/80 hover:text-foreground py-2 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  scrollToSection(e, item.href);
+                  setIsMobileMenuOpen(false);
+                }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={
                   isMobileMenuOpen

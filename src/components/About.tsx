@@ -1,32 +1,27 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { GraduationCap, Heart, Target, Zap } from "lucide-react";
 
 const aboutCards = [
   {
-    icon: Heart,
     title: "Passion",
     description:
       "I'm deeply passionate about creating responsive, user-focused interfaces that delight and engage.",
     color: "bg-accent",
   },
   {
-    icon: Target,
     title: "Focus",
     description:
       "Frontend Developer with hands-on experience in HTML, CSS, and JavaScript, building clean and modern websites.",
     color: "bg-secondary",
   },
   {
-    icon: GraduationCap,
     title: "Education",
     description:
       "B.Sc Computer Science at Babcock University with a stellar 4.32 GPA, constantly learning and growing.",
     color: "bg-highlight",
   },
   {
-    icon: Zap,
     title: "Goal",
     description:
       "Seeking an internship or junior frontend role where I can contribute, learn, and build amazing things.",
@@ -74,11 +69,6 @@ const About = () => {
               <div
                 className={`glass rounded-3xl p-8 h-full card-hover ${card.color}/30`}
               >
-                <div
-                  className={`w-14 h-14 rounded-2xl ${card.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  <card.icon className="w-7 h-7 text-foreground/80" />
-                </div>
                 <h3 className="text-2xl font-display font-semibold mb-3">
                   {card.title}
                 </h3>

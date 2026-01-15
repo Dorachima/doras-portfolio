@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, GraduationCap } from "lucide-react";
 
 const experiences = [
   {
@@ -10,7 +9,6 @@ const experiences = [
     company: "Babcock University New Horizon Tech-Hub",
     period: "2025 – Present",
     type: "Part-Time",
-    icon: Briefcase,
     description:
       "Building and maintaining responsive web interfaces, collaborating with teams, and contributing to real-world projects.",
     color: "bg-primary",
@@ -21,7 +19,6 @@ const experiences = [
     company: "New Horizons Computer Learning Center",
     period: "2025 – 2026",
     type: "Training",
-    icon: GraduationCap,
     description:
       "Gaining hands-on experience in modern web development practices and professional workflows.",
     color: "bg-highlight",
@@ -89,11 +86,6 @@ const Experience = () => {
                 <div className="w-full md:w-[calc(50%-40px)] ml-16 md:ml-0">
                   <div className="glass rounded-2xl p-6 md:p-8 card-hover">
                     <div className="flex items-center gap-4 mb-4">
-                      <div
-                        className={`w-12 h-12 rounded-xl ${exp.color} flex items-center justify-center`}
-                      >
-                        <exp.icon className="w-6 h-6 text-primary-foreground" />
-                      </div>
                       <div>
                         <span className="text-sm text-muted-foreground">
                           {exp.period}
