@@ -5,8 +5,9 @@ import { useRef, useState } from "react";
 const skillCategories = [
   {
     title: "Technical Skills",
-    color: "from-primary/80 to-primary-glow/60",
-    bgColor: "bg-accent/50",
+    color: "from-[#E8A46B]/40 to-[#E8A46B]/20",
+    bgColor: "bg-[#FFF7F1]",
+
     skills: [
       { name: "HTML5", description: "Semantic markup & accessibility" },
       { name: "CSS3", description: "Animations, Grid, Flexbox" },
@@ -29,8 +30,8 @@ const skillCategories = [
   },
   {
     title: "Personal Strengths",
-    color: "from-mint to-highlight/60",
-    bgColor: "bg-mint/50",
+    color: "from-[#6FAF8A]/40 TO-[#6FAF8A]/20",
+    bgColor: "bg-[#F6FAF7]",
     skills: [
       { name: "Organized", description: "Structured & methodical" },
       { name: "Quick Learner", description: "Adapts to new tech fast" },
